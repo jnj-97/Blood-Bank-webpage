@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbUNmfNXDXubU_Q8kAWFyCcdzIF6lQerP5Ew&usqp=CAU"
+  type = "image/x-icon">
+  <title>Blood Bank Management</title>
+  <style>
+    img {
+      display: block;
+      padding: 3px;       
+      border: 3px solid rgb(0, 0, 0);
+    }
+  table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-spacing: 30px;
+}
+th, td {
+  padding: 15px;
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <center>
+          <img src="https://i.pinimg.com/originals/25/a5/21/25a521abe02e1da60acfb4195dfd32f0.gif">
+      <br><br>
+      
+    <form id="form"> 
+    <select>
+        <option>Select</option>
+        <option>A+ve</option>
+        <option>A-ve</option>
+        <option>B+ve</option>
+        <option>B-ve</option>
+        <option>O+ve</option>
+        <option>O-ve</option>
+        <option>AB+ve</option>
+        <option>AB-ve</option>
+    </select>
+    
+    <button type="submit">Search</button>
+  </form>
+
+</center>
+  <br><br>
+
+  <table class = "table table-hover" style="width:100%">
+      <caption>Blood Bank Management</caption>
+      
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>E-Mail ID</th>
+            <th>Address</th>
+         </tr>
+      </thead>
+      
+      <tbody>
+        <%=data%>
+        <%data.forEach(entry=>{%>
+          
+            <%=entry.user%>
+            <%=entry.contact%>
+            <%=entry.mail%>
+        <%})%>
+       
+        <br>
+
+      
+      </tbody>
+  </table>
+</body>
+</html>
